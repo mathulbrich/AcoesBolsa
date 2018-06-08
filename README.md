@@ -258,3 +258,41 @@ atualização de preços das bolsas das empresas em cada 5 segundos, repetindo o
 Após todas as transações serem efetivadas um relatório é gerado no console do usuário
 mostrando todas as contas e suas negociações efetuadas.
 
+
+Arquitetura
+========
+
+O presente sistema foi desenvolvido separando cada parte do programa em uma camada distinta,
+assim seguindo a seguinte estrutura:
+
+| PACKAGE                      | CAMADA           |
+| -------------                | -------------    |
+| com.acoes.bolsa              | Main             |
+| com.acoes.bolsa.modelo       | Model            |
+| com.acoes.bolsa.controlador  | Controller       |
+| com.acoes.bolsa.servicos     | Service          |
+| com.acoes.bolsa.repositorio  | Repository       |
+| com.acoes.bolsa.extra        | Report Util      |
+| com.acoes.bolsa.simulador    | Simulation Util  |
+
+As camadas de modelo, controlador, serviços e repositórios seguem o padrão normal da arquitetura
+MVC. O pacote Main contém a classe principal do sistema onde o mesmo será executado. Os outros dois
+pacotes são utilitários, com o pacote Extra contendo a classe que emite o relatório das negociações,
+e o pacote Simulador contendo um método para geração dos preços de forma aleatória.
+
+Tecnologias
+========
+
+Neste sistema foram utilizadas as seguintes tecnologias:
+
+```
+Spring Boot
+Maven
+Hibernate
+JPA
+JUnit
+Mockito
+```
+
+Aprendizado
+========
