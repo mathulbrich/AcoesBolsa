@@ -43,7 +43,7 @@ MySQL
 --------
 
 Para poder utilizar a aplicação normalmente se relacionando com o banco de 
-dados é necessário criar um banco novo com as seguintes configurações:
+dados é necessário criar uma nova conexão do banco com as seguintes configurações:
 
 ```
 Conexão: localhost ou 127.0.0.1
