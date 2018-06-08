@@ -94,10 +94,10 @@ Na conta, dentro do sistema, pode ser realizado duas operações:
 | -------------     | ------------- | ------------- |
 | /conta/cadastrar  |               | POST          |
 
-Para realizar o cadastro de uma nova conta, realize uma chamada http
+Para realizar o cadastro de uma nova conta, realize uma chamada HTTP
 seguindo as definições acima.
 
-Ademais, é necessário enviar juntamente um corpo com esta estrutura:
+Ademais, é necessário enviar juntamente um corpo com base nesta estrutura:
 
 ```
 {
@@ -106,11 +106,13 @@ Ademais, é necessário enviar juntamente um corpo com esta estrutura:
 }
 ```
 
+O email deve ser 'gmail' para garantir o envio do email quando a negociação for realizada.
+
 ### Consultar Conta
 
-| ENDPOINT          | PARAMETROS                  | TIPO          |
-| -------------     | -------------               | ------------- |
-| /conta/{id}       | id = identificador da conta | GET           |
+| ENDPOINT          | PARAMETROS       | TIPO          |
+| -------------     | -------------    | ------------- |
+| /conta/{id}       | id = id da conta | GET           |
 
 Para consultar uma conta existente no sistema, realiza uma chamada http
 seguindo as definições acima.
@@ -141,22 +143,80 @@ sendo elas:
 
 ### Cadastrar monitoramento
 
-| ENDPOINT                             | PARAMETROS                  | TIPO          |
-| -------------                        | -------------               | ------------- |
-| /conta/{id}/monitoramentos/cadastrar | id = identificador da conta | POST          |
+| ENDPOINT                             | PARAMETROS       | TIPO          |
+| -------------                        | -------------    | ------------- |
+| /conta/{id}/monitoramentos/cadastrar | id = id da conta | POST          |
 
+Para realizar o cadastro de monitoramento no sistema deve enviar uma requisição HTTP 
+seguindo as definições acima.
+
+Ademais, juntamente na requisição deve-se enviar um corpo com base nesta estrutura:
+
+```
+{
+	"precoCompra" : 10.1,
+	"precoVenda" : 10.9,
+	"nomeEmpresa" : "Intel"
+}
+```
+
+O nome da empresa deve ser Intel ou SoftExpert.
 
 ### Consultar monitoramento
 
-| ENDPOINT                             | PARAMETROS                                       | TIPO          |
-| -------------                        | -------------                                    | ------------- |
-| /conta/{id}/monitoramentos/{moni_id} | id = id da conta / moni_id = id do monitoramento | GET           |
+| ENDPOINT                             | PARAMETROS        | TIPO          |
+| -------------                        | -------------     | ------------- |
+| /conta/{id}/monitoramentos           | id = id da conta  | GET           |
 
-### Alterar monitormento
+Para realizar a consulta dos monitoramentos relativo a conta, deve se enviar uma
+requisição HTTP seguindo as definições acima.
+
+O retorno da requisição será um arquivo no formato JSON assim como o do seguinte exemplo:
+
+```
+{
+	"id" : 1,
+	"precoCompra" : 10.1,
+	"precoVenda" : 10.9,
+	"nomeEmpresa" : "Intel",
+	"conta" : 1
+}
+```
+
+### Atualizar monitoramento
 
 | ENDPOINT                             | PARAMETROS        | TIPO          |
 | -------------                        | -------------     | ------------- |
-| /conta/{id}/monitoramentos           | id = id da conta  | PUT           |
+| /conta/{id}/monitoramentos/atualizar | id = id da conta  | PUT           |
+
+Para realizar a atualização dos monitoramentos relativo a conta, deve se enviar uma
+requisição HTTP seguindo as definições acima.
+
+Ademais, é necessário enviar juntamente um corpo com base nesta estrutura:
+
+```
+{
+	"id" : 1
+	"precoCompra" : 10.3,
+	"precoVenda" : 10.55,
+	"nomeEmpresa" : "Intel",
+}
+```
 
 ### Remover monitoramento
+
+| ENDPOINT                             | PARAMETROS                                       | TIPO          |
+| -------------                        | -------------                                    | ------------- |
+| /conta/{id}/monitoramentos/{moni_id} | id = id da conta / moni_id = id do monitoramento | DELETE        |
+
+Para realizar a remoção dos monitoramentos relativo a conta, deve se enviar uma
+requisição HTTP seguindo as definições acima.
+
+Após enviar a requisição, caso ocorra com sucesso, o monitoramento já estará removido.
+
+Negociações
+--------
+
+
+
 
