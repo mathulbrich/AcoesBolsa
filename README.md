@@ -306,6 +306,9 @@ e sua configuração padrão que acabou tornando mais rápido a criação do sis
 na criação de Web Services. Além do fato de eu possuir uma pequena experiência com a
 ferramenta.
 
+**Spring Data**: O Spring Data foi amarrado pelo Maven no projeto ajudando na construção
+dos repositórios de dados.
+
 **Maven**: O Maven é uma tecnologia utilizada por padrão pelo Spring Boot, assim foi
 essencial na criação do projeto.
 
@@ -318,13 +321,17 @@ a tempos, tendo uma experiência maior no seu uso.
 **Hibernate**: A tecnologia ORM do Hibernate foi utilizada pela sua indicação do Spring Boot
 e sua ótima implementação do padrão JPA, que foi fortemente utilizado na camada de modelo.
 
-**JavaMail**:
+**JavaMail**: O JavaMail foi a tecnologia utilizada para o envio de emails por questão de sua
+popularidade, e consequentemente sua facilidade de implementação e uso.
 
-**Jackson**:
+**Jackson**: A tecnologia Jackson foi utilizada no projeto por padrão do Spring Boot, ajudando
+a formatar e emitir as respostas das requisições do usuário.
 
-**JUnit**:
+**JUnit**: A tecnologia JUnit foi utilizada no projeto por ser um padrão de testes unitários
+da linguagem de programação Java.
 
-**Gson**:
+**Gson**: A biblioteca Gson foi utilizada no projeto durante os testes para transformar os
+objetos no formato JSON de forma simples e limpa.
 
 Aprendizado
 ========
