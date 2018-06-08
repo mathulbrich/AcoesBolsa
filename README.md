@@ -15,9 +15,8 @@
         * [Consultar Monitoramento](#consultar-monitoramento)
         * [Atualizar Monitoramento](#atualizar-monitoramento)
         * [Remover Monitoramento](#remover-monitoramento)
+      * [Histórico](#histórico)
       * [Negociações](#negociações)
-        * [Historico](#historico)
-      * [Transações](#transações)
    * [Arquitetura](#arquitetura)
    * [Tecnologias](#tecnologias)
    * [Aprendizado](#aprendizado)
@@ -210,12 +209,46 @@ Ademais, é necessário enviar juntamente um corpo com base nesta estrutura:
 | /conta/{id}/monitoramentos/{moni_id} | id = id da conta / moni_id = id do monitoramento | DELETE        |
 
 Para realizar a remoção dos monitoramentos relativo a conta, deve se enviar uma
-requisição HTTP seguindo as definições acima.
+requisição HTTP seguindo as definições acima. Após enviar a requisição, caso ocorra 
+com sucesso, o monitoramento já estará removido.
 
-Após enviar a requisição, caso ocorra com sucesso, o monitoramento já estará removido.
+Histórico
+--------
+
+| ENDPOINT              | PARAMETROS       | TIPO          |
+| -------------         | -------------    | ------------- |
+| /conta/{id}/historico | id = id da conta | GET           |
+
+Para consultar o histórico de negociações relativo a conta, deve se enviar uma
+requisição HTTP seguindo as definições acima. 
+
+O retorno da requisição será um arquivo no formato JSON assim como o do seguinte exemplo:
+
+```
+{
+	{
+		"id" : 1
+	},
+	{
+		"id" : 2
+	}
+}
+```
 
 Negociações
 --------
+
+| ENDPOINT            | PARAMETROS       | TIPO          |
+| -------------       | -------------    | ------------- |
+| /transacoes/iniciar |                  | POST          |
+
+As negociações no sistema são realizadas quando uma requisição o inicio das transações é
+solicitado seguindo as definições acima. Assim, o sistema irá realizar uma operação de
+atualização de preços das bolsas das empresas em cada 5 segundos, repetindo o processo
+100 vezes (8 minutos e 20 segundos).
+
+Após todas as transações serem efetivadas um relatório é gerado no console do usuário
+mostrando todas as contas e suas negociações efetuadas.
 
 
 
