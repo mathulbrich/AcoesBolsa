@@ -148,7 +148,9 @@ sendo elas:
 
 ### Consultar monitoramento
 
-
+| ENDPOINT                             | PARAMETROS                                      | TIPO          |
+| -------------                        | -------------                                   | ------------- |
+| /conta/{id}/monitoramentos/{moni_id} | id = id da conta, moni_id = id do monitoramento | GET           |
 
 ### Alterar monitormento
 
