@@ -117,8 +117,6 @@ seguindo as seguintes definições:
 
 O retorno da requisição será um arquivo no formato JSON assim como o do seguinte exemplo:
 
-**Exemplo:**
-
 ```
 {
 	"id" : 1,
