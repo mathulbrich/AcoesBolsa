@@ -97,7 +97,7 @@ seguindo as seguintes definições:
 | -------------     | ------------- | ------------- |
 | /conta/cadastrar  |               | POST          |
 
-Ademais, é necessário enviar um corpo com esta estrutura:
+Ademais, é necessário enviar juntamente um corpo com esta estrutura:
 
 ```
 {
@@ -105,3 +105,28 @@ Ademais, é necessário enviar um corpo com esta estrutura:
 	"saldo" : 10000
 }
 ```
+
+### Consultar Conta
+
+Para consultar uma conta existente no sistema, realiza uma chamada http
+seguindo as seguintes definições:
+
+| ENDPOINT          | PARAMETROS                  | TIPO          |
+| -------------     | -------------               | ------------- |
+| /conta/{id}       | id = identificador da conta | GET           |
+
+O retorno da requisição será um arquivo no formato JSON assim como o do seguinte exemplo:
+
+**Exemplo:**
+
+```
+{
+	"id" : 1,
+	"email" : "testconsulta@gmail.com",
+	"saldo" : 10000,
+	monitoramentos : [],
+	negociacoes : []
+}
+```
+
+
