@@ -90,9 +90,14 @@ Na conta, dentro do sistema, pode ser realizado duas operações:
 
 ### Cadastrar conta
 
-Para realizar o cadastro de uma nova conta, realize uma chamada
-http do tipo POST para a seguinte URL: http://localhost:8080/conta/cadastrar.
-Ademais, realize esta chamada com esta estrutura de corpo:
+Para realizar o cadastro de uma nova conta, realize uma chamada http
+seguindo as seguintes definições:
+
+| ENDPOINT          | PARAMETROS    | TIPO          |
+| -------------     | ------------- | ------------- |
+| /conta/cadastrar  |               | POST          |
+
+Ademais, é necessário enviar um corpo com esta estrutura:
 
 ```
 {
