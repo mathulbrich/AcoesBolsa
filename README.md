@@ -62,8 +62,8 @@ CREATE DATABASE acoesbolsa;
 ```
 
 O usuário também poderá incluir sua própria conexão assim como o banco, 
-porém para isso deve ser realizado o donwload do projeto e adicionar
-essas alterações no arquivo application.properties.
+porém para isso deve ser realizado o download do projeto e adicionar
+essas alterações no arquivo [application.properties](https://github.com/MathUlbrich/AcoesBolsa/blob/master/src/main/resources/application.properties).
 
 Aplicação
 --------
