@@ -122,6 +122,7 @@ O retorno da requisição será um arquivo no formato JSON assim como o do segui
 	"id" : 1,
 	"email" : "testconsulta@gmail.com",
 	"saldo" : 10000,
+	quantidadeAcoes : 0,
 	monitoramentos : [],
 	negociacoes : []
 }
