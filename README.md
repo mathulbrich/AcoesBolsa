@@ -286,13 +286,49 @@ Tecnologias
 Neste sistema foram utilizadas as seguintes tecnologias:
 
 ```
-Spring Boot
-Maven
-Hibernate
-JPA
-JUnit
-Mockito
+* Spring Boot
+* Spring MVC
+* Spring Data
+* Maven
+* Mockito
+* MySQL
+* Hibernate
+* JavaMail
+* Jackson
+* JUnit
+* Gson
 ```
+
+**SpringBoot:** A tecnologia Spring Boot foi utilizada neste projeto pela sua praticidade
+e sua configuração padrão que acabou tornando mais rápido a criação do sistema.
+
+**Spring MVC**: O Spring MVC foi utilizado no projeto também pela sua facilidade de uso
+na criação de Web Services. Além do fato de eu possuir uma pequena experiência com a
+ferramenta.
+
+**Maven**: O Maven é uma tecnologia utilizada por padrão pelo Spring Boot, assim foi
+essencial na criação do projeto.
+
+**Mockito**: O Mockito foi uma ótima tencologia utilizada no projeto, se destacando pela
+sua facilidade na criação de testes de requisições HTTP.
+
+**MySQL**: O banco de dados MySQL foi utilizado no projeto pois é um banco que já utilizo
+a tempos, tendo uma experiência maior no seu uso.
+
+**Hibernate**: A tecnologia ORM do Hibernate foi utilizada pela sua indicação do Spring Boot
+e sua ótima implementação do padrão JPA, que foi fortemente utilizado na camada de modelo.
+
+**JavaMail**:
+
+**Jackson**:
+
+**JUnit**:
+
+**Gson**:
 
 Aprendizado
 ========
+
+Com a construção deste sistema, gostaria de deixar meus agradecimentos a SoftExpert. Consegui aprender
+muito mesmo durante esta etapa, assim começando a entender o descobrir novas tecnologias que com certeza
+serão refinadas com o passar do tempo e com novas experiências.
