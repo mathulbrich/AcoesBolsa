@@ -1,4 +1,4 @@
-# Simulador de Negociações na Bolsa de Valores
+# Simulador Bolsa de Valores
 
 Índice
 ========
@@ -71,7 +71,7 @@ Aplicação
 Para poder rodar o app na sua máquina, após realizar as configurações anteriores,
 siga as seguintes etapas:
 
-1. Faça o download do JAR da aplicação.
+1. Faça o [download](https://github.com/MathUlbrich/AcoesBolsa/releases/tag/v1.0AcoesBolsa) do JAR da aplicação.
 2. Abra o console e vá até a pasta onde o JAR foi baixado.
 3. No diretório correto execute o seguinte comando:
 ```
