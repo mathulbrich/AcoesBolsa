@@ -272,13 +272,12 @@ assim seguindo a seguinte estrutura:
 | com.acoes.bolsa.controlador  | Controller       |
 | com.acoes.bolsa.servicos     | Service          |
 | com.acoes.bolsa.repositorio  | Repository       |
-| com.acoes.bolsa.extra        | Report Util      |
-| com.acoes.bolsa.simulador    | Simulation Util  |
+| com.acoes.bolsa.util         | Util             |
 
 As camadas de modelo, controlador, serviços e repositórios seguem o padrão normal da arquitetura
-MVC. O pacote Main contém a classe principal do sistema onde o mesmo será executado. Os outros dois
-pacotes são utilitários, com o pacote Extra contendo a classe que emite o relatório das negociações,
-e o pacote Simulador contendo um método para geração dos preços de forma aleatória.
+MVC. O pacote Main contém a classe principal do sistema onde o mesmo será executado. O outro pacoté
+é um utilitário, contendo a classe que emite o relatório das negociações, e um simulador que possui
+um método para geração dos preços de forma aleatória.
 
 Tecnologias
 ========
