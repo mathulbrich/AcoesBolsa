@@ -71,9 +71,9 @@ Aplicação
 Para poder rodar o app na sua máquina, após realizar as configurações anteriores,
 siga as seguintes etapas:
 
-1. Faça o download da aplicação.
-2. Abra seu terminal e navegue até a pasta onde a pasta da aplicação foi colocada.
-3. Dentro da pasta target, execute o comando:
+1. Faça o download do JAR da aplicação.
+2. Abra o console e vá até a pasta onde o JAR foi baixado.
+3. No diretório correto execute o seguinte comando:
 ```
 java -jar ProjetoAcoesBolsa-0.0.1-SNAPSHOT.jar
 ```
