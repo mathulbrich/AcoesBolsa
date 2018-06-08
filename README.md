@@ -32,8 +32,11 @@ monitoramentos em determinadas empresas.
 Requisitos
 ========
 
-* Java JRE 1.8_162 acima
+Para compilar ou rodar esta aplicação você precisa de:
+
+* JDK 1.8
 * MySQL
+* Maven 3
 
 Instalação
 ========
