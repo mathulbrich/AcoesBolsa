@@ -96,7 +96,7 @@ Ademais, realize esta chamada com esta estrutura de corpo:
 
 ```
 {
-	"email" : "exemplo@email.com",
+	"email" : "exemplo@gmail.com",
 	"saldo" : 10000
 }
 ```
