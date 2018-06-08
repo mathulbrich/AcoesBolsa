@@ -90,12 +90,12 @@ Na conta, dentro do sistema, pode ser realizado duas operações:
 
 ### Cadastrar conta
 
-Para realizar o cadastro de uma nova conta, realize uma chamada http
-seguindo as seguintes definições:
-
 | ENDPOINT          | PARAMETROS    | TIPO          |
 | -------------     | ------------- | ------------- |
 | /conta/cadastrar  |               | POST          |
+
+Para realizar o cadastro de uma nova conta, realize uma chamada http
+seguindo as definições acima.
 
 Ademais, é necessário enviar juntamente um corpo com esta estrutura:
 
@@ -108,12 +108,12 @@ Ademais, é necessário enviar juntamente um corpo com esta estrutura:
 
 ### Consultar Conta
 
-Para consultar uma conta existente no sistema, realiza uma chamada http
-seguindo as seguintes definições:
-
 | ENDPOINT          | PARAMETROS                  | TIPO          |
 | -------------     | -------------               | ------------- |
 | /conta/{id}       | id = identificador da conta | GET           |
+
+Para consultar uma conta existente no sistema, realiza uma chamada http
+seguindo as definições acima.
 
 O retorno da requisição será um arquivo no formato JSON assim como o do seguinte exemplo:
 
@@ -128,4 +128,31 @@ O retorno da requisição será um arquivo no formato JSON assim como o do segui
 }
 ```
 
+Monitoramento
+--------
+
+No monitoramento de ações, o usuário possui quatro operações que podem ser realizadas, 
+sendo elas:
+
+1. Cadastrar novo monitoramento
+2. Consultar monitoramento
+3. Alterar monitoramento
+4. Remover monitoramento
+
+### Cadastrar monitoramento
+
+| ENDPOINT                             | PARAMETROS                  | TIPO          |
+| -------------                        | -------------               | ------------- |
+| /conta/{id}/monitoramentos/cadastrar | id = identificador da conta | POST          |
+
+
+### Consultar monitoramento
+
+
+
+### Alterar monitormento
+
+
+
+### Remover monitoramento
 
