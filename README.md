@@ -100,8 +100,8 @@ Ademais, é necessário enviar juntamente um corpo com base nesta estrutura:
 
 ```
 {
-	"email" : "exemplo@gmail.com",
-	"saldo" : 10000
+    "email" : "exemplo@gmail.com",
+    "saldo" : 10000
 }
 ```
 
@@ -120,12 +120,12 @@ O retorno da requisição será um arquivo no formato JSON assim como o do segui
 
 ```
 {
-	"id" : 1,
-	"email" : "testconsulta@gmail.com",
-	"saldo" : 10000,
-	quantidadeAcoes : 0,
-	monitoramentos : [],
-	negociacoes : []
+    "id" : 1,
+    "email" : "testconsulta@gmail.com",
+    "saldo" : 10000,
+    "quantidadeAcoes" : 0,
+    "monitoramentos" : [],
+    "negociacoes" : []
 }
 ```
 
@@ -153,9 +153,9 @@ Ademais, juntamente na requisição deve-se enviar um corpo com base nesta estru
 
 ```
 {
-	"precoCompra" : 10.1,
-	"precoVenda" : 10.9,
-	"nomeEmpresa" : "Intel"
+    "precoCompra" : 10.1,
+    "precoVenda" : 10.9,
+    "nomeEmpresa" : "Intel"
 }
 ```
 
@@ -174,11 +174,10 @@ O retorno da requisição será um arquivo no formato JSON assim como o do segui
 
 ```
 {
-	"id" : 1,
-	"precoCompra" : 10.1,
-	"precoVenda" : 10.9,
-	"nomeEmpresa" : "Intel",
-	"conta" : 1
+    "id" : 1,
+    "precoCompra" : 10.1,
+    "precoVenda" : 10.9,
+    "nomeEmpresa" : "Intel"
 }
 ```
 
@@ -195,10 +194,10 @@ Ademais, é necessário enviar juntamente um corpo com base nesta estrutura:
 
 ```
 {
-	"id" : 1
-	"precoCompra" : 10.3,
-	"precoVenda" : 10.55,
-	"nomeEmpresa" : "Intel",
+    "id" : 1
+    "precoCompra" : 10.3,
+    "precoVenda" : 10.55,
+    "nomeEmpresa" : "Intel",
 }
 ```
 
@@ -226,12 +225,21 @@ O retorno da requisição será um arquivo no formato JSON assim como o do segui
 
 ```
 {
-	{
-		"id" : 1
-	},
-	{
-		"id" : 2
-	}
+    {
+        "id" : 1,
+        "valorNegociado" : 10.5677,
+        "quantidade" : 957.67,
+        "nomeEmpresa" : "Intel"
+        "tipoNegociacao" : "COMPRA",
+        "data" : "08-06-2018 00:03:06"
+    },
+    {
+        "id" : 2,
+        "valorNegociado" : 10.8213,
+        "quantidade" : 957.67,
+        "tipoNegociacao" : "VENDA",
+        "data" : "08-06-2018 00:05:11"
+    }
 }
 ```
 
@@ -249,7 +257,4 @@ atualização de preços das bolsas das empresas em cada 5 segundos, repetindo o
 
 Após todas as transações serem efetivadas um relatório é gerado no console do usuário
 mostrando todas as contas e suas negociações efetuadas.
-
-
-
 
