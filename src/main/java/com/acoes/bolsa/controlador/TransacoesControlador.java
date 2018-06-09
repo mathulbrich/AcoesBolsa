@@ -1,14 +1,10 @@
 package com.acoes.bolsa.controlador;
 
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
-
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.acoes.bolsa.modelo.Conta;
 import com.acoes.bolsa.modelo.Empresa;
 import com.acoes.bolsa.modelo.Monitoramento;
@@ -20,7 +16,6 @@ import com.acoes.bolsa.util.EmissorRelatorios;
 import com.acoes.bolsa.util.SimuladorPrecos;
 
 @RestController
-@EnableAutoConfiguration
 @RequestMapping("/transacoes")
 public class TransacoesControlador {
 	
@@ -31,8 +26,7 @@ public class TransacoesControlador {
 	@Autowired
 	private ServicoNegociacao servicoNegociacoes;
 	
-	@Transactional
-	@RequestMapping(path = "iniciar", method = POST)
+	@PostMapping("iniciar")
 	public void inicarTransacoes() {
 		
 		Empresa empresa = Empresa.getIntelInstance();

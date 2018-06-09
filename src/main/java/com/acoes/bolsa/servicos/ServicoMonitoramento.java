@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.acoes.bolsa.modelo.Conta;
 import com.acoes.bolsa.modelo.Empresa;
@@ -21,6 +22,7 @@ public class ServicoMonitoramento {
 	@Autowired
 	private RepositorioMonitoramento repoMonitoramento;
 
+	@Transactional
 	public Monitoramento salvarMonitoramento(Long contaId, Monitoramento monitoramento) {
 		Conta conta = repoConta.findById(contaId).get();
 		monitoramento.setConta(conta);
@@ -33,6 +35,7 @@ public class ServicoMonitoramento {
 		return repoMonitoramento.findById(id).get();
 	}
 
+	@Transactional
 	public void excluirMonitoramento(Long id) {
 		repoMonitoramento.deleteById(id);
 	}
@@ -41,6 +44,7 @@ public class ServicoMonitoramento {
 		return repoMonitoramento.findAll();
 	}
 	
+	@Transactional
 	public void analisarMudancaDePreco(List<Monitoramento> monitoramentos) {
 		
 		for(Monitoramento m : monitoramentos) {

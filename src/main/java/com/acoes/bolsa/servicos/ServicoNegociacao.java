@@ -2,8 +2,11 @@ package com.acoes.bolsa.servicos;
 
 import java.util.Date;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.acoes.bolsa.modelo.Conta;
 import com.acoes.bolsa.modelo.Empresa;
 import com.acoes.bolsa.modelo.Monitoramento;
@@ -19,7 +22,7 @@ public class ServicoNegociacao {
 	@Autowired
 	private ServicoEmail servicoEmail;
 	
-	
+	@Transactional
 	public Negociacao realizarCompraAcoes(Monitoramento monitoramento, Empresa empresa, Conta conta) {
 		Float acoes = conta.getSaldo() / empresa.getValorAcao();
 		
@@ -46,6 +49,7 @@ public class ServicoNegociacao {
 		return negociacao;
 	}
 	
+	@Transactional
 	public Negociacao realizarVendaAcoes(Monitoramento monitoramento, Empresa empresa, Conta conta) {
 		
 		Float quantidade = conta.getQuantidadeAcoes();
