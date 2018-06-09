@@ -1,4 +1,8 @@
-# Simulador de Negociações na Bolsa de Valores
+# Simulador Bolsa de Valores
+
+<p align="left">
+<img src="https://img.shields.io/badge/test-complete-brightgreen.svg">
+</p>
 
 Índice
 ========
@@ -62,8 +66,8 @@ CREATE DATABASE acoesbolsa;
 ```
 
 O usuário também poderá incluir sua própria conexão assim como o banco, 
-porém para isso deve ser realizado o donwload do projeto e adicionar
-essas alterações no arquivo application.properties.
+porém para isso deve ser realizado o download do projeto e adicionar
+essas alterações no arquivo [application.properties](https://github.com/MathUlbrich/AcoesBolsa/blob/master/src/main/resources/application.properties).
 
 Aplicação
 --------
@@ -71,7 +75,7 @@ Aplicação
 Para poder rodar o app na sua máquina, após realizar as configurações anteriores,
 siga as seguintes etapas:
 
-1. Faça o download do JAR da aplicação.
+1. Faça o [download](https://github.com/MathUlbrich/AcoesBolsa/releases/tag/v1.0AcoesBolsa) do JAR da aplicação.
 2. Abra o console e vá até a pasta onde o JAR foi baixado.
 3. No diretório correto execute o seguinte comando:
 ```
