@@ -1,5 +1,10 @@
 # Simulador Bolsa de Valores
 
+<p align="left">
+<img src="https://img.shields.io/circleci/project/github/badges/shields.svg">
+<img src="https://img.shields.io/badge/test-complete-brightgreen.svg">
+</p>
+
 Índice
 ========
 
